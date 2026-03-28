@@ -5,6 +5,9 @@ Re-Evaporation/dist/Scripts/Re-Evaporation.ModCode.pdb
 Re-Evaporation/Scripts/Re-Evaporation.ModCode.deps.json
 Re-Evaporation/Scripts/Re-Evaporation.ModCode.dll
 Re-Evaporation/Scripts/Re-Evaporation.ModCode.pdb
-Benchmarks/
 output/
 TimberbornMods/.vs/
+**/bin/**
+Benchmarks/OptimizationPatches/src/obj/OptimizationPatches.csproj.nuget.g.targets
+Benchmarks/OptimizationPatches/src/obj/Release/OptimizationPatches.pdb
+**/obj/**

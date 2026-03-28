@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>MicroBenchmarks.Benchmarks.AllocationBenchmarks-20260328-004027</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22621.4317/22H2/2022Update/SunValley2)
+11th Gen Intel Core i7-11700K 3.60GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 10.0.201
+  [Host]     : .NET 10.0.5 (10.0.526.15411), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+  DefaultJob : .NET 10.0.5 (10.0.526.15411), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method         </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Gen0</th><th>Allocated</th><th>Alloc Ratio</th>
+</tr>
+</thead><tbody><tr><td>NewListEachRow</td><td>2,314.2 ns</td><td>105.52 ns</td><td>306.13 ns</td><td>2,224.7 ns</td><td>1.02</td><td>0.18</td><td>1.3466</td><td>11264 B</td><td>1.00</td>
+</tr><tr><td>ThreadLocalPooledList</td><td>1,081.4 ns</td><td>5.33 ns</td><td>4.45 ns</td><td>1,080.7 ns</td><td>0.47</td><td>0.06</td><td>-</td><td>-</td><td>0.00</td>
+</tr><tr><td>StackAllocSpan</td><td>517.6 ns</td><td>10.09 ns</td><td>9.44 ns</td><td>514.2 ns</td><td>0.23</td><td>0.03</td><td>-</td><td>-</td><td>0.00</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "Name": "TimberbornProfiler",
+  "Version": "1.0",
+  "Id": "TimberbornProfiler",
+  "MinimumGameVersion": "1.0.0.0",
+  "Description": "Per-tick game profiler for Timberborn. Instruments water sim, pathfinding, and character movement. Writes CSV to LocalLow/Mechanistry/Timberborn/. Enable in Mod Settings.",
+  "DllName": "TimberbornProfiler.dll",
+  "RequiredMods": [
+    {
+      "Id": "Harmony",
+      "MinimumVersion": "0.0.0.0"
+    },
+    {
+      "Id": "eMka.ModSettings",
+      "MinimumVersion": "0.0.0.0"
+    }
+  ],
+  "OptionalMods": []
+}

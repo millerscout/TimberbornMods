@@ -1,0 +1,7 @@
+ID,Text,Comment
+timberbornprofiler.settings.enable,Enable Profiling,
+timberbornprofiler.settings.enable.desc,Write per-tick timing data to a CSV file in LocalLow/Mechanistry/Timberborn/. Off by default — zero overhead when disabled.,
+timberbornprofiler.settings.flushinterval,Flush Interval (ticks),
+timberbornprofiler.settings.flushinterval.desc,"How many ticks between CSV flushes to disk. Lower = more responsive data, higher = less I/O overhead.",
+timberbornprofiler.settings.printsummary,Print Summary to Log,
+timberbornprofiler.settings.printsummary.desc,Also print a one-line average summary to Player.log every flush interval.,

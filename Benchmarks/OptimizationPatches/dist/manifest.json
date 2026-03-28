@@ -1,0 +1,15 @@
+{
+  "Name": "OptimizationPatches",
+  "Version": "1.0",
+  "Id": "OptimizationPatches",
+  "MinimumGameVersion": "1.0.0.0",
+  "Description": "Water sim performance patches for Timberborn. Replaces Math.Ceiling with MathF.Ceiling in outflow hot path, pre-allocates ColumnOutflows lists to eliminate Gen1 GC pauses, and removes float-to-double promotions in contamination diffusion.",
+  "DllName": "OptimizationPatches.dll",
+  "RequiredMods": [
+    {
+      "Id": "Harmony",
+      "MinimumVersion": "0.0.0.0"
+    }
+  ],
+  "OptionalMods": []
+}
