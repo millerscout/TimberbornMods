@@ -1,0 +1,11 @@
+ID,Text,Comment
+reevaporation.settings.enablemod,Enable Mod,
+reevaporation.settings.enablemod.desc,Toggles the entire mod on or off.,
+reevaporation.settings.coveredevaporationrate,Covered Evaporation Rate,
+reevaporation.settings.coveredevaporationrate.desc,"Evaporation speed for water under structures/coverage (0%-400% of vanilla rate). 0% = no evaporation, 100% = vanilla rate, 200% = twice as fast, 400% = you do want to suffer, eh?"
+reevaporation.settings.uncoveredevaporationrate,Uncovered Evaporation Rate,
+reevaporation.settings.uncoveredevaporationrate.desc,"Evaporation speed for water in the open (0%-400% of vanilla rate). 0% = no evaporation, 100% = vanilla rate, 200% = twice as fast, 400% = you do want to suffer, eh?"
+reevaporation.settings.maxsearchheight,Coverage Search Height,
+reevaporation.settings.maxsearchheight.desc,How high above water to search for cover. Higher values detect taller structures but may impact performance on large maps.,
+reevaporation.settings.updateinterval,Check Frequency,
+reevaporation.settings.updateinterval.desc,"How often to update coverage detection (1=faster, 10=slower). Roughly: 1≈half day, 5≈2 days, 10≈week.",

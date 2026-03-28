@@ -1,0 +1,19 @@
+{
+  "Name": "Re-Evaporation",
+  "Version": "1.3",
+  "Id": "Re-evaporation",
+  "MinimumGameVersion": "1.0.0.0",
+  "Description": "Reduces water evaporation when covered by blocks or structures. My water. My precious?",
+  "DllName": "Re-Evaporation.ModCode.dll",
+  "RequiredMods": [
+    {
+      "Id": "Harmony",
+      "MinimumVersion": "0.0.0.0"
+    },
+    {
+      "Id": "eMka.ModSettings",
+      "MinimumVersion": "0.0.0.0"
+    }
+  ],
+  "OptionalMods": []
+}

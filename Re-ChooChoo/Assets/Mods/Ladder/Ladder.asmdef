@@ -1,0 +1,26 @@
+{
+    "name": "Ladder",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "Bindito.Core.dll",
+        "0Harmony.dll",
+        "Timberborn.BaseComponentSystem.dll",
+        "Timberborn.BuildingsNavigation.dll",
+        "Timberborn.BlockSystem.dll",
+        "Timberborn.ModManagerScene.dll",
+        "Timberborn.PrefabSystem.dll",
+        "Timberborn.SingletonSystem.dll",
+        "Timberborn.PathSystem.dll",
+        "Timberborn.TemplateSystem.dll",
+        "Timberborn.Coordinates.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

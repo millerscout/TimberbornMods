@@ -1,0 +1,3 @@
+[submodule "TimberbornMods-datvm"]
+	path = TimberbornMods-datvm
+	url = git@github.com:millerscout/TimberbornMods-datvm.git
