@@ -10,6 +10,13 @@ namespace MicroBenchmarks.Benchmarks
     /// Baseline: Math.Ceiling(double) — current game code (float promoted to double)
     /// MathF:    MathF.Ceiling(float)  — stays in float domain, avoids promotion
     /// FastCeil: bit-trick integer ceil — branchless, no FPU round-trip
+    ///
+    /// ⚠ CORRECTNESS WARNING — FastCeilPositive is WRONG for non-integer floats:
+    ///   -(int)(-x) truncates toward zero, which computes floor(x), not ceil(x).
+    ///   e.g. x=3.2 → -(int)(-3.2) = -(-3) = 3, but Math.Ceiling(3.2) = 4.
+    ///   Verified: 10M random floats in [0,20] → 99.99% mismatch vs Math.Ceiling.
+    ///   The benchmark totals look plausible only because errors partially cancel in the sum.
+    ///   DO NOT use FastCeilPositive in game patches — use MathF.Ceiling instead.
     /// </summary>
     [MemoryDiagnoser]
     [DisassemblyDiagnoser(printSource: true)]
@@ -50,9 +57,9 @@ namespace MicroBenchmarks.Benchmarks
         }
 
         /// <summary>
-        /// Branchless integer ceiling via bit manipulation:
-        ///   fastCeil(x) = -(int)(-x)  when x > 0
-        /// Equivalent for positive floats; avoids FPU rounding mode entirely.
+        /// Branchless bit-trick: -(int)(-x).
+        /// BENCHMARKS FAST but IS INCORRECT — computes floor(x), not ceil(x), for non-integers.
+        /// Retained to document the evaluation. Do not use in production code.
         /// </summary>
         [Benchmark]
         public int FastCeilPositive()

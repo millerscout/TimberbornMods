@@ -30,6 +30,22 @@
       <HintPath>$(GameDir)\Timberborn_Data\Managed\Timberborn.WaterSystem.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="Timberborn.NaturalResources">
+      <HintPath>$(GameDir)\Timberborn_Data\Managed\Timberborn.NaturalResources.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Timberborn.BlockSystem">
+      <HintPath>$(GameDir)\Timberborn_Data\Managed\Timberborn.BlockSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Timberborn.TemplateSystem">
+      <HintPath>$(GameDir)\Timberborn_Data\Managed\Timberborn.TemplateSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Timberborn.BlueprintSystem">
+      <HintPath>$(GameDir)\Timberborn_Data\Managed\Timberborn.BlueprintSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(GameDir)\Timberborn_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>

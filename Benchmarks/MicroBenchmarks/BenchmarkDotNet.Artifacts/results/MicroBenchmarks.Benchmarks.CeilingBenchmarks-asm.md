@@ -24,7 +24,7 @@ M00_L00:
        vandpd    xmm1,xmm1,xmm0
        mov       r8d,7FFFFFFF
        vcvttsd2si r10d,xmm1
-       vucomisd  xmm0,qword ptr [7FFBFC1283A8]
+       vucomisd  xmm0,qword ptr [7FFBFC0F83C8]
        cmovb     r8d,r10d
        add       eax,r8d
        add       rcx,4
@@ -60,7 +60,7 @@ M00_L00:
        vandps    xmm1,xmm1,xmm0
        mov       r8d,7FFFFFFF
        vcvttss2si r10d,xmm1
-       vucomiss  xmm0,dword ptr [7FFBFC1283A8]
+       vucomiss  xmm0,dword ptr [7FFBFC1183C8]
        cmovb     r8d,r10d
        add       eax,r8d
        add       rcx,4
@@ -92,12 +92,12 @@ M00_L01:
        add       rcx,10
 M00_L00:
        vmovss    xmm0,dword ptr [rcx]
-       vxorps    xmm0,xmm0,[7FFBFC128410]
+       vxorps    xmm0,xmm0,[7FFBFC138430]
        vcmpordss xmm1,xmm0,xmm0
        vandps    xmm1,xmm1,xmm0
        mov       r8d,7FFFFFFF
        vcvttss2si r10d,xmm1
-       vucomiss  xmm0,dword ptr [7FFBFC128420]
+       vucomiss  xmm0,dword ptr [7FFBFC138440]
        cmovb     r8d,r10d
        sub       eax,r8d
        add       rcx,4

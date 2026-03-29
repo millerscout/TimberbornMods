@@ -8,8 +8,8 @@ BenchmarkDotNet v0.14.0, Windows 11 (10.0.22621.4317/22H2/2022Update/SunValley2)
 
 
 ```
-| Method                 | Mean     | Error   | StdDev  | Ratio | RatioSD | Allocated | Alloc Ratio |
-|----------------------- |---------:|--------:|--------:|------:|--------:|----------:|------------:|
-| FloatOnlyCompare       | 464.7 μs | 3.60 μs | 3.19 μs |  1.00 |    0.01 |         - |          NA |
-| FloatToDoublePromotion | 599.0 μs | 4.01 μs | 3.75 μs |  1.29 |    0.01 |         - |          NA |
-| PureDoubleCompare      | 592.5 μs | 8.57 μs | 8.02 μs |  1.27 |    0.02 |         - |          NA |
+| Method                 | Mean     | Error   | StdDev  | Ratio | Allocated | Alloc Ratio |
+|----------------------- |---------:|--------:|--------:|------:|----------:|------------:|
+| FloatOnlyCompare       | 479.6 μs | 3.24 μs | 2.87 μs |  1.00 |         - |          NA |
+| FloatToDoublePromotion | 615.5 μs | 4.17 μs | 3.49 μs |  1.28 |         - |          NA |
+| PureDoubleCompare      | 611.3 μs | 5.58 μs | 4.95 μs |  1.27 |         - |          NA |

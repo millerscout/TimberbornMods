@@ -8,8 +8,8 @@ BenchmarkDotNet v0.14.0, Windows 11 (10.0.22621.4317/22H2/2022Update/SunValley2)
 
 
 ```
-| Method            | Mean     | Error   | StdDev  | Ratio | Code Size | Allocated | Alloc Ratio |
-|------------------ |---------:|--------:|--------:|------:|----------:|----------:|------------:|
-| MathCeilingDouble | 719.7 μs | 3.58 μs | 3.17 μs |  1.00 |      70 B |         - |          NA |
-| MathFCeilingFloat | 508.7 μs | 1.25 μs | 1.04 μs |  0.71 |      66 B |         - |          NA |
-| FastCeilPositive  | 203.1 μs | 4.03 μs | 4.48 μs |  0.28 |      72 B |         - |          NA |
+| Method            | Mean     | Error   | StdDev   | Ratio | RatioSD | Code Size | Allocated | Alloc Ratio |
+|------------------ |---------:|--------:|---------:|------:|--------:|----------:|----------:|------------:|
+| MathCeilingDouble | 734.6 μs | 6.10 μs |  5.70 μs |  1.00 |    0.01 |      70 B |         - |          NA |
+| MathFCeilingFloat | 518.5 μs | 2.93 μs |  2.60 μs |  0.71 |    0.01 |      66 B |         - |          NA |
+| FastCeilPositive  | 244.6 μs | 4.87 μs | 14.28 μs |  0.33 |    0.02 |      72 B |         - |          NA |

@@ -1,29 +1,34 @@
-using System;
 using HarmonyLib;
+using Timberborn.BlockSystem;
+using Timberborn.NaturalResources;
+using Timberborn.TemplateSystem;
 using UnityEngine;
 
 namespace OptimizationPatches.Patches
 {
     /// <summary>
-    /// Fixes a vanilla bug: NaturalResourceFactory.PlantNew has no occupancy check
-    /// before calling BlockObjectFactory.CreateFinished, unlike SpawnNew which calls
-    /// CanSpawn() first. If the target cell becomes occupied between task assignment
-    /// and beaver execution, PlantNew throws ArgumentException and crashes the entity.
-    /// The finalizer catches the block-conflict and silently discards it.
+    /// Fixes a vanilla bug: NaturalResourceFactory.PlantNew has no occupancy check before
+    /// calling BlockObjectFactory.CreateFinished, unlike SpawnNew which calls CanSpawn first.
+    /// If the target cell is occupied, CreateUnfinished instantiates the entity GameObject and
+    /// then Reposition throws — leaving a dangling entity. The Prefix prevents instantiation
+    /// entirely by mirroring the same check SpawnNew uses (ignoring moisture/field constraints
+    /// since player planting should bypass those).
     /// </summary>
-    [HarmonyPatch("Timberborn.NaturalResources.NaturalResourceFactory", "PlantNew")]
+    [HarmonyPatch(typeof(NaturalResourceFactory), nameof(NaturalResourceFactory.PlantNew))]
     internal static class PlantNewCrashPatch
     {
-        static Exception? Finalizer(Exception? __exception, string resourceId, Vector3Int coordinates)
+        static bool Prefix(
+            string resourceId,
+            Vector3Int coordinates,
+            SpawnValidationService ____spawnValidationService,
+            TemplateNameMapper ____templateNameMapper)
         {
-            if (__exception is ArgumentException)
-            {
-                Debug.LogWarning(
-                    $"[OptimizationPatches] PlantNew suppressed: cell {coordinates} was already occupied " +
-                    $"when '{resourceId}' tried to spawn. ({__exception.Message})");
-                return null;
-            }
-            return __exception;
+            BlockObjectSpec spec = ____templateNameMapper.GetTemplate(resourceId).GetSpec<BlockObjectSpec>();
+            if (____spawnValidationService.CanSpawnIgnoringConstraints(coordinates, spec))
+                return true;
+            Debug.LogWarning(
+                $"[OptimizationPatches] PlantNew skipped: cell {coordinates} is occupied for '{resourceId}'.");
+            return false;
         }
     }
 }
